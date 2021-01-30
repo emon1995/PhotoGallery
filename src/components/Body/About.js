@@ -4,10 +4,11 @@ import Nature from "./PhotoBody/Nature/Nature";
 import Design from "./PhotoBody/Design/Design";
 import Abstract from "./PhotoBody/Abstract/Abstract";
 import Technology from "./PhotoBody/Technology/Technology";
-import { Nav, NavItem, NavLink } from "reactstrap";
+import { Nav, NavItem } from "reactstrap";
+
 const About = (props) => {
   document.title = "About";
-  console.log(props);
+  //console.log(props);
   return (
     <>
       <div>

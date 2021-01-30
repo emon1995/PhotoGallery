@@ -14,7 +14,12 @@ const NatureItem = (props) => {
             style={{ opacity: "0.5" }}
           />
           <CardImgOverlay>
-            <CardTitle>{props.photo.name}</CardTitle>
+            <CardTitle
+              style={{ cursor: "pointer" }}
+              onClick={props.PhotoSelect}
+            >
+              {props.photo.name}
+            </CardTitle>
           </CardImgOverlay>
         </CardBody>
       </Card>

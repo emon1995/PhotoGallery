@@ -1,8 +1,8 @@
 import React from "react";
 import { Card, CardImg, CardBody, CardTitle, CardText } from "reactstrap";
-import NatureLoadComment from "./NatureLoadComment";
+import AbstractLoadComment from "./AbstractLoadComment";
 
-const NaturePhotoDetail = (props) => {
+const AbstractPhotoDetail = (props) => {
   return (
     <div>
       <Card style={{ marginTop: "10px" }}>
@@ -11,11 +11,11 @@ const NaturePhotoDetail = (props) => {
           <CardTitle>{props.photo.name}</CardTitle>
           <CardText>{props.photo.description}</CardText>
           <hr />
-          <NatureLoadComment comments={props.photo.comments} />
+          <AbstractLoadComment comments={props.photo.comments} />
         </CardBody>
       </Card>
     </div>
   );
 };
 
-export default NaturePhotoDetail;
+export default AbstractPhotoDetail;

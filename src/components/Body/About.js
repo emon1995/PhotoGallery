@@ -46,6 +46,8 @@ const About = (props) => {
           <Route path={`${props.match.path}/design`} component={Design} />
           <Route path={`${props.match.path}/abstract`} component={Abstract} />
         </Switch>
+        <hr />
+        <hr />
       </div>
     </>
   );

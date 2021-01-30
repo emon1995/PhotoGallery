@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import {
   Navbar,
   NavbarBrand,
@@ -10,26 +10,30 @@ import {
 } from "reactstrap";
 
 class Navigation extends Component {
-    state = {
-        isNavOpen : false,
-    }
+  state = {
+    isNavOpen: false,
+  };
 
-    navToggle = () => {
-        this.setState({
-            isNavOpen : !this.state.isNavOpen,
-        })
-    }
+  navToggle = () => {
+    this.setState({
+      isNavOpen: !this.state.isNavOpen,
+    });
+  };
   render() {
     return (
       <div>
         <Navbar dark color="dark" expand="sm">
           <div className="container">
             <NavbarToggler onClick={this.navToggle} />
-            <NavbarBrand href="/">Photo Gallery</NavbarBrand>
+            <NavbarBrand>
+              <Link to="/" className="nav-link">
+                Photo Gallery
+              </Link>
+            </NavbarBrand>
             <Collapse isOpen={this.state.isNavOpen} navbar>
               <Nav className="mr-auto" navbar>
                 <NavItem>
-                  <Link to="/" className="nav-link active">
+                  <Link to="/home" className="nav-link active">
                     Home
                   </Link>
                 </NavItem>
